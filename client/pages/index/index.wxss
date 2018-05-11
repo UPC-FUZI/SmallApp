@@ -1,0 +1,82 @@
+/**index.wxss**/
+.slide-image{  
+    width: 100%;  
+    height:150px;
+} 
+.container{
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cut_off{
+  height: 8px;
+  background: #E6E6E6;
+}
+.new{
+  display:flex;
+  flex-direction:row;
+}
+.car_index{
+  padding-top: 3px;
+  height: 80px;
+  display:flex;
+  flex-direction:row;
+}
+.car_index_pic{
+  width: 100px;
+}
+.car_index_pic_image{
+  width: 100px;
+  height: 75px;
+}
+.car_index_intro{
+  padding-left: 5px;
+  display:flex;
+  flex-direction:column;
+}
+.car_index_intro_1{
+  padding-top: 2px;
+  font-size: 13px;
+}
+.car_index_intro_2{
+  padding-top: 2px;
+  font-size: 13px;
+}
+.car_index_intro_3{
+  padding-top: 2px;
+  font-size: 10px;
+  color: #BDBDBD;
+}
+.car_index_intro_4{
+  padding-top: 2px;
+  font-size: 12px;
+  color: #FE2E2E;
+}
+.pictureList{
+  /* border:1rpx dotted greenyellow; */
+}
+.domainLeft{
+  width: 49%;
+  height: 120px;
+  float: left;
+  /* border:1rpx dotted greenyellow; */
+}
+.domainRight{
+  width: 49%;
+  height: 120px;
+  float: right;
+}
+.picLeft{
+  width: 100%;
+  height: 100px;  
+  /* border:1rpx dotted greenyellow; */
+}
+.picRight{
+  width: 100%;
+  height: 100px;
+}
+.introduce{
+  text-align:center;
+  font-size:7px;
+  padding-bottom: 1px;
+}

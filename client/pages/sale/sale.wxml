@@ -1,0 +1,54 @@
+<import src="../../model/model.wxml"/>
+<view class="poster">
+  <image style="height:150px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{salePosterPic}}"></image>
+</view>
+<view id="adduser">
+    <form bindsubmit="formSubmit">
+         <view class="section">
+            <view class="section_left"><text space="nbsp">姓      名:</text></view>
+            <view class='section_right'>
+                <input type="text" placeholder-class="phcolor" class="input-text" name="userName" placeholder="请输入姓名" />
+            </view>    
+        </view>
+    <view class="line-css"/>
+        <view class="section">
+            <view class="section_left">联系方式:</view>
+            <view class='section_right'>
+              <input type="text" placeholder-class="phcolor" class="input-text" name="telephone" placeholder="请输入车型" />
+            </view>
+        </view>
+    <view class="line-css"/>
+        <view class="section">
+            <view class="section_left">省份城市:</view>
+            <view class='section_right'>
+              <input type="text" placeholder-class="phcolor" class="input-text" name="city" placeholder="请选择城市" bindtap="translate">{{province}} {{city}} {{county}}</input>
+            </view>
+        </view>
+    <view class="line-css"/>
+        <view class="section">
+            <view class="section_left">品牌车系:</view>
+            <view class='section_right'>
+                <input type="text" placeholder-class="phcolor" class="input-text" name="brand" placeholder="请输入品牌车系" />
+            </view>    
+        </view>
+    <view class="line-css"/>
+        <view class="section">
+            <view class="section_left">行驶里程:</view>
+            <view class='section_right'>
+                <input type="text" placeholder-class="phcolor" class="input-text" name="mileage" placeholder="请输入里程（公里）" />
+            </view>
+        </view>
+    <view class="line-css"/>
+        <view class="section">
+            <view class="section_left">上牌时间:</view>
+            <view class='section_right'>
+                <input type="text" placeholder-class="phcolor" class="input-text" name="licsenceDate" placeholder="请输入上牌时间" />
+            </view>
+        </view>
+    <view class="line-css"/>
+        <view class="section_submit">
+          <button formType="submit" class="btn_submit">我要卖车</button>
+        </view>
+    </form>
+</view>    
+<template is="areaData" data="{{...item}}"/>

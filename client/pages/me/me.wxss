@@ -1,0 +1,49 @@
+/* pages/me/me.wxss */
+.container{
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.logo_pic{
+  width:30%;
+  height: 70px;
+  display: block;
+  margin:auto;
+}
+.contact{
+  padding-top: 5px;
+  display:flex;
+  flex-direction:row;
+}
+.contact_info{
+  font-size: 12px;
+  color: #A4A4A4;
+}
+.contact_pic{
+  padding-top: 1px;
+  padding-left: 5px;
+  width: 16px;
+  height: 16px;
+}
+.location{
+  padding-top: 3px;
+}
+.location_info{
+  font-size: 10px;
+  color: #BDBDBD;
+}
+.wx{
+  padding-top: 5px;
+}
+.wx_pic{
+  width: 100%;
+  justify-content:center;
+}
+.wx_info{
+  width: 100%;
+  color: #A4A4A4;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;  
+  justify-content: center; 
+  /* border:1px solid #000; */
+}

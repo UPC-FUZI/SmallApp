@@ -1,0 +1,46 @@
+@import '../../model/model.wxss';
+
+.line-css {
+    height:1px;
+    background:#D8D8D8;
+    margin:0 20rpx;
+}
+.poster{
+  padding-top: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.section{
+  height: 75rpx;
+  padding-left: 3px;
+  padding-right: 3px;
+  display: flex;  
+  flex-direction: row;  
+}
+.section_left{
+  width:28%;
+  padding-top: 5px;
+  padding-left:10px;
+}
+.section_right{
+  width:68%;
+  padding-top: 5px;
+  padding-right:6px;
+}
+.phcolor{  
+    color: #D8D8D8; 
+    font-size: 11px; 
+}
+.section_submit{
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.btn_submit{
+  margin-top:10px;
+  height: 35px;
+  width: 85%;
+  font-size: 14px;
+  background-color:#29d529;
+  color: #FFFFFF;
+}

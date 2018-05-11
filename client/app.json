@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/detail/detail",
+    "pages/sale/sale",
+    "pages/buy/buy"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "君博名车",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#707070",
+    "selectedColor": "#1296db",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/tabBar/homeSel.png",
+        "iconPath": "images/tabBar/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabBar/buySel.png",
+        "iconPath": "images/tabBar/buy.png",
+        "pagePath": "pages/buy/buy",
+        "text": "买车"
+      },
+      {
+        "selectedIconPath": "images/tabBar/saleSel.png",
+        "iconPath": "images/tabBar/sale.png",
+        "pagePath": "pages/sale/sale",
+        "text": "卖车"
+      },
+      {
+        "selectedIconPath": "images/tabBar/userSel.png",
+        "iconPath": "images/tabBar/user.png",
+        "pagePath": "pages/me/me",
+        "text": "我们"
+      }
+    ]
+  }
+}
