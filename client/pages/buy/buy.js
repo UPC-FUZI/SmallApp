@@ -41,17 +41,17 @@ Page({
   getDetails: function (e) {
     wx.navigateTo({
       //e.currentTarget.dataset.id 传递的参数
-      url: '../detail/detail',
-      success: function (res) {
-        wx.showToast({
-          title: "获取详情成功",
-        })
-      },
-      fail: function (res) {
-        wx.showToast({
-          title: "获取详情失败",
-        })
-      }
+      url: '../detail/detail?id=' + e.currentTarget.dataset.id,
+      // success: function (res) {
+      //   wx.showToast({
+      //     title: "获取详情成功",
+      //   })
+      // },
+      // fail: function (res) {
+      //   wx.showToast({
+      //     title: "获取详情失败",
+      //   })
+      // }
     })
   },
   /**

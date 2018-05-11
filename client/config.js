@@ -3,7 +3,8 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
-var host = 'https://umfucc7m.qcloud.la';
+var host = 'https://umfucc7m.qcloud.la';//开发环境
+// var host = 'https://320457670.junbo.club';//生产环境
 
 var config = {
 
@@ -12,10 +13,11 @@ var config = {
     host,
 
     // 登录地址，用于建立会话
-    salerUrl: `${host}/weapp/saler/submitCarInfo`,
+    salerUrl: `${host}/saler/submitCarInfo`,
 
-    homePageUrl: `${host}/weapp/homePage`,
-    buyPageUrl: `${host}/weapp/buyPage`,
+    homePageUrl: `${host}/homePage`,
+    buyPageUrl: `${host}/buyPage`,
+    detailPageUrl: `${host}/detailPage`,
     // 测试的请求地址，用于测试会话
     // requestUrl: `${host}/weapp/user`,
 

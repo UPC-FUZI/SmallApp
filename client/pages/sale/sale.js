@@ -33,7 +33,7 @@ Page({
         city: e.detail.value.city,
         brand: e.detail.value.brand,
         mileage: e.detail.value.mileage,
-        licsenceDate: e.detail.value.licsenceDate
+        licenseDate: e.detail.value.licenseDate
       }),
       header: {
         'content-type': 'application/x-www-form-urlencoded'

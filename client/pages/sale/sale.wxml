@@ -42,7 +42,7 @@
         <view class="section">
             <view class="section_left">上牌时间:</view>
             <view class='section_right'>
-                <input type="text" placeholder-class="phcolor" class="input-text" name="licsenceDate" placeholder="请输入上牌时间" />
+                <input type="text" placeholder-class="phcolor" class="input-text" name="licenseDate" placeholder="请输入上牌时间" />
             </view>
         </view>
     <view class="line-css"/>
