@@ -23,7 +23,7 @@
       <image style="width:100%;height:130px;" mode="aspectFit" src="../../images/wx.png"/>
     </view>
     <view class="wx_info">
-      <text>保存图片 & 扫描加好友</text>
+      <text>截屏保存图片 & 扫描加好友</text>
     </view>
   </view>
 </view>

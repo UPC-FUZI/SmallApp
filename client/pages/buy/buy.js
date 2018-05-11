@@ -9,7 +9,8 @@ Page({
    */
   data: {
     imageUrl: "https://dm30webimages.geely.com/GeelyPromotion/DiHaoGS/SectionFourth/showpic/pc/3s.jpg",
-    carInfos:null
+    carInfos:null,
+    count:0
   },
 
   /**
@@ -22,7 +23,8 @@ Page({
       url: config.service.buyPageUrl, //仅为示例，并非真实的接口地址
       success: function (res) {
         that.setData({
-          carInfos: res.data.data.carInfos
+          carInfos: res.data.data.carInfos,
+          count: res.data.data.count
         })
         wx.showToast({
           title: "共获取到"+ res.data.data.count +"辆车的信息",
@@ -34,22 +36,24 @@ Page({
         })
       }
     })
-    // wx.request({
-    //   method: "POST",
-    //   url: config.service.salerUrl, //仅为示例，并非真实的接口地址
-    //   data: Util.json2Form({
-    //     userName: "UPC_FUZI"
-    //   }),
-    //   header: {
-    //     'content-type': 'application/x-www-form-urlencoded' // 默认值
-    //   },
-    //   success: function (res) {
-    //     console.log(res.data)
-    //   }
-    // })
-  
   },
 
+  getDetails: function (e) {
+    wx.navigateTo({
+      //e.currentTarget.dataset.id 传递的参数
+      url: '../detail/detail',
+      success: function (res) {
+        wx.showToast({
+          title: "获取详情成功",
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: "获取详情失败",
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

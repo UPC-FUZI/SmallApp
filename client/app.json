@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/me/me",
+    "pages/buy/buy",
     "pages/detail/detail",
     "pages/sale/sale",
-    "pages/buy/buy"
+    "pages/me/me"
   ],
   "window": {
     "backgroundTextStyle": "light",

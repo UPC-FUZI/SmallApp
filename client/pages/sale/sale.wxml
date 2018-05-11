@@ -21,7 +21,7 @@
         <view class="section">
             <view class="section_left">省份城市:</view>
             <view class='section_right'>
-              <input type="text" placeholder-class="phcolor" class="input-text" name="city" placeholder="请选择城市" bindtap="translate">{{province}} {{city}} {{county}}</input>
+              <input type="text" placeholder-class="phcolor" class="input-text" name="city" placeholder="请输入城市">{{province}} {{city}} {{county}}</input>
             </view>
         </view>
     <view class="line-css"/>
@@ -47,7 +47,7 @@
         </view>
     <view class="line-css"/>
         <view class="section_submit">
-          <button formType="submit" class="btn_submit">我要卖车</button>
+          <button formType="submit" class="btn_submit" hover-class="button-hover">我要卖车</button>
         </view>
     </form>
 </view>    

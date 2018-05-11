@@ -5,9 +5,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    imgUrls: ['../../images/car/gs1.png', '../../images/car/gs2.png', '../../images/car/gs3.png', '../../images/car/gs4.png'],
+    poster: {
+      indicatorDots: true,
+      autoplay: true,
+      interval: 5000,
+      duration: 1000,
+    },
+    videoUrl: "https://dm30webimages.geely.com/GeelyPromotion/DiHaoGS/SectionFourth/videos/video/pc1.mp4",
+    brand_detail:"2018款 优雅版 1.8L 手动风尚型",
+    price:"4.70 万",
+    new_price:"11.28万(含税)",
   },
-
+  callTelephone: function(){
+    wx.makePhoneCall({
+      phoneNumber: "18811530776" //仅为示例，并非真实的电话号码
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -44,3 +44,6 @@
   background-color:#29d529;
   color: #FFFFFF;
 }
+.button-hover{
+  background-color: #00FFBF;
+}

@@ -34,14 +34,18 @@ Page({
     })
   },
   //事件处理函数
-  bindViewTap: function() {
-  },
-  getDetails: function(){
+  getDetails: function(e){
     wx.navigateTo({
+      //e.currentTarget.dataset.id 传递的参数
       url:'../detail/detail',
       success:function(res){
         wx.showToast({
-          title: "跳转成功",
+          title: "获取详情成功",
+        })
+      },
+      fail: function(res){
+        wx.showToast({
+          title: "获取详情失败",
         })
       }
     }) 

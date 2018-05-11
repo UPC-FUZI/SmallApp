@@ -1,48 +1,60 @@
 // pages/sale/sale.js
-var model = require('../../model/model.js')
-
-var show = false;
-var item = {};
+var config = require('../../config');
+var Util = require('../../utils/util.js'); 
 
 Page({
   /**
    * 页面的初始数据
    */
   data: {
-    carType: ['轿车', 'SUV'],
-    typeIndex: 0,
     salePosterPic:"../../images/sale/sale_poster.png",
-    item: {
-      show: show
-    }
   },
-  bindPickerChange: function (e) {
-    this.setData({
-      typeIndex: e.detail.value
+    // wx.request({
+    //   method: "POST",
+    //   url: config.service.salerUrl, //仅为示例，并非真实的接口地址
+    //   data: Util.json2Form({
+    //     userName: "UPC_FUZI"
+    //   }),
+    //   header: {
+    //     'content-type': 'application/x-www-form-urlencoded' // 默认值
+    //   },
+    //   success: function (res) {
+    //     console.log(res.data)
+    //   }
+    // })
+  formSubmit: function (e) {
+    var that = this;
+    wx.request({
+      method: "POST",
+      url: config.service.salerUrl,
+      data: Util.json2Form({
+        userName: e.detail.value.userName,
+        telephone: e.detail.value.telephone,
+        city: e.detail.value.city,
+        brand: e.detail.value.brand,
+        mileage: e.detail.value.mileage,
+        licsenceDate: e.detail.value.licsenceDate
+      }),
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        wx.showToast({
+          title: '提交信息成功',
+        })
+      },
+      fail: function () {
+        wx.showToast({
+          title: '提交信息失败',
+        })
+      }, 
+      complete: function () {
+        wx.switchTab({
+          url: '../index/index'
+        })
+      }
     })
   },
-  // formSubmit: function (e) {
-  //   var that = this;
-  //   var formData = e.detail.value;
-  //   wx.request({
-  //     url: 'http://127.0.0.1:8888/saler/submitCarInfo', //仅为示例，并非真实的接口地址
-  //     data: {
-  //       userName: e.detail.value.userName,
-  //       telephone: e.detail.value.telephone,
-  //       city: e.detail.value.city,
-  //       brand: e.detail.value.brand,
-  //       mileage: e.detail.value.mileage,
-  //       licsenceDate: e.detail.value.licsenceDate
-  //     },
-  //     header: {
-  //       'content-type': 'application/json' // 默认值
-  //     },
-  //     method: "POST",
-  //     success: function (res) {
-  //       console.log(res.data)
-  //     }
-  //   })
-  // },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -54,27 +66,6 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function (e) {
-    var that = this;
-    //请求数据
-    model.updateAreaData(that, 0, e);
-  },
-  //点击选择城市按钮显示picker-view
-  translate: function (e) {
-    model.animationEvents(this, 0, true, 400);
-  },
-  //隐藏picker-view
-  hiddenFloatView: function (e) {
-    model.animationEvents(this, 200, false, 400);
-  },
-  //滑动事件
-  bindChange: function (e) {
-    model.updateAreaData(this, 1, e);
-    item = this.data.item;
-    this.setData({
-      province: item.provinces[item.value[0]].name,
-      city: item.citys[item.value[1]].name,
-      county: item.countys[item.value[2]].name
-    });
   },
   /**
    * 生命周期函数--监听页面显示

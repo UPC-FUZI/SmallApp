@@ -1,11 +1,11 @@
 <!--pages/bug/bug.wxml-->
 <view class="container">
   <view >
-    <text style="font-size:12px;color:#6E6E6E;">共找到32辆好车</text>
+    <text style="font-size:12px;color:#6E6E6E;">共找到{{count}}辆好车</text>
   </view>
   <view class="car_index" wx:for-items="{{carInfos}}" wx:key="{{carInfo}}">
-    <view class="car_index_pic">
-      <image class="car_index_pic_image" mode="aspectFill" bindtap="getDetails" src="{{item.indexPic}}"/>
+    <view class="car_index_pic"  data-id="2120151073" bindtap="getDetails">
+      <image class="car_index_pic_image" mode="aspectFill" src="{{item.indexPic}}"/>
     </view>
     <view class="car_index_intro">
       <view class="car_index_intro_1">{{item.brand}}</view>

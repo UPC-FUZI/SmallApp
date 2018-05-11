@@ -1,7 +1,7 @@
 /* pages/me/me.wxss */
 .container{
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .logo_pic{
   width:30%;
