@@ -5,7 +5,7 @@
       <block wx:for-items="{{carInfo.imgUrls}}" wx:key="{{item}}">  
         <swiper-item>  
            <navigator hover-class="navigator-hover">  
-            <image src="{{item}}" mode="aspectFill" class="slide-image"/>  
+            <image src="{{host + item}}" mode="widthFix" class="slide-image"/>  
            </navigator>   
         </swiper-item>  
       </block>  
@@ -62,6 +62,6 @@
   <view class="module_title">视频信息</view>
   <view class="video-section">
     <view class="video_info">高颜值的它内外兼修</view>
-    <video src="{{carInfo.videoUrl}}"   controls class="video"></video>
+    <video src="{{carInfo.videoUrl}}" poster="../../images/logo.png" controls show-fullscreen-btn class="video"></video>
   </view>
 </view>

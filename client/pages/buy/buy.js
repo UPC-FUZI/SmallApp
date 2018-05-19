@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imageUrl: "https://dm30webimages.geely.com/GeelyPromotion/DiHaoGS/SectionFourth/showpic/pc/3s.jpg",
+    host: config.service.host,
     carInfos:null,
     count:0
   },

@@ -1,6 +1,7 @@
 /* pages/detail/detail.wxss */
 .slide-image{  
   height:150px;
+  width: 100%;
 } 
 .container{
   padding-left: 7px;

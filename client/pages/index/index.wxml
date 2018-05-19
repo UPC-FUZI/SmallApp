@@ -18,13 +18,13 @@
     </view>
   </view>
   <view class="car_index" wx:for-items="{{newCarInfos}}" wx:key="{{newCarInfo}}">
-    <view class="car_index_pic" data-id="2120151073" bindtap="getDetails">
-      <image class="car_index_pic_image" mode="aspectFill" src="{{item.indexPic}}"/>
+    <view class="car_index_pic" data-id="{{item.id}}" bindtap="getDetails">
+      <image class="car_index_pic_image" mode="aspectFill" src="{{host + item.index_pic_url}}"/>
     </view>
     <view class="car_index_intro">
       <view class="car_index_intro_1">{{item.brand}}</view>
       <view class="car_index_intro_2">{{item.brand_detail}}</view>
-      <view class="car_index_intro_3">{{item.license_date }}{{item.mileage}}</view>
+      <view class="car_index_intro_3">{{item.license_date}} | {{item.mileage}}</view>
       <view class="car_index_intro_4">{{item.price}}</view>
     </view>
   </view>

@@ -9,19 +9,6 @@ Page({
   data: {
     salePosterPic:"../../images/sale/sale_poster.png",
   },
-    // wx.request({
-    //   method: "POST",
-    //   url: config.service.salerUrl, //仅为示例，并非真实的接口地址
-    //   data: Util.json2Form({
-    //     userName: "UPC_FUZI"
-    //   }),
-    //   header: {
-    //     'content-type': 'application/x-www-form-urlencoded' // 默认值
-    //   },
-    //   success: function (res) {
-    //     console.log(res.data)
-    //   }
-    // })
   formSubmit: function (e) {
     var that = this;
     wx.request({
@@ -40,17 +27,15 @@ Page({
       },
       success: function (res) {
         wx.showToast({
-          title: '提交信息成功',
-        })
-      },
-      fail: function () {
-        wx.showToast({
-          title: '提交信息失败',
-        })
-      }, 
-      complete: function () {
+          title: res.data.message,
+        });
         wx.switchTab({
           url: '../index/index'
+        })
+      },
+      fail: function (res) {
+        wx.showToast({
+          title: JSON.parse(res),
         })
       }
     })

@@ -7,13 +7,15 @@ var host = 'https://umfucc7m.qcloud.la';//开发环境
 // var host = 'https://320457670.junbo.club';//生产环境
 
 var config = {
-
+  call:{
+    telephone: "18811530776"
+  },
   // 下面的地址配合云端 Demo 工作
   service: {
     host,
 
     // 登录地址，用于建立会话
-    salerUrl: `${host}/saler/submitCarInfo`,
+    salerUrl: `${host}/seller/submitCarInfo`,
 
     homePageUrl: `${host}/homePage`,
     buyPageUrl: `${host}/buyPage`,
